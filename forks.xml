@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remove-project name="AOSPA/android_frameworks_base" />
+  <project path="frameworks/base" name="AOSPA-alioth/android_frameworks_base" remote="github" revision="topaz" />
+
+  <remove-project name="AOSPA/android_packages_apps_Settings" />
+  <project path="packages/apps/Settings" name="AOSPA-alioth/android_packages_apps_Settings" remote="github" revision="topaz" />
+
+  <remove-project name="AOSPA/android_packages_apps_Launcher3" />
+  <project path="packages/apps/Launcher3" name="AOSPA-alioth/android_packages_apps_Launcher3" remote="github" revision="topaz" />
+
+  <remove-project name="AOSPA/android_system_core" />
+  <project path="system/core" name="AOSPA-alioth/android_system_core" remote="github" revision="topaz" />
+
+  <remove-project name="AOSPA/android_vendor_aospa" />
+  <project path="vendor/aospa" name="AOSPA-alioth/android_vendor_aospa" remote="github" revision="topaz" >
+    <linkfile src="build.sh" dest="rom-build.sh" />
+  </project>
+
+  <remove-project name="AOSPA/android_build" />
+  <project path="build/make" name="AOSPA-alioth/android_build" remote="github" revision="topaz" >
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+
+  <remove-project name="AOSPA/android_art" />
+  <project path="art" name="AOSPA-alioth/android_art" remote="github" revision="topaz" />
+
+  <remove-project name="AOSPA/android_build_soong" />
+  <project path="build/soong" name="AOSPA-alioth/android_build_soong" remote="github" revision="topaz" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <remove-project name="android_vendor_google_pixel" />
+  <project path="vendor/google/pixel" name="pa-gk/android_vendor_google_pixel" remote="gitlab" revision="topaz" />
+
+  <remove-project name="AOSPA/android_device_qcom_common" />
+  <project path="device/qcom/common" name="AOSPA-alioth/android_device_qcom_common" remote="github" revision="topaz" >
+    <linkfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk"/>
+  </project>
+
+  <remove-project name="AOSPA/android_frameworks_av" />
+  <project path="frameworks/av" name="AOSPA-alioth/android_frameworks_av" remote="github" revision="topaz" />
+
+<remove-project name="AOSPA/android_packages_modules_Connectivity" />
+  <project path="packages/modules/Connectivity" name="AOSPA-alioth/android_packages_modules_Connectivity" remote="github" revision="topaz" />
+
+<remove-project name="AOSPA/android_packages_services_Telecomm" />
+  <project path="packages/services/Telecomm" name="AOSPA-alioth/android_packages_services_Telecomm" remote="github" revision="topaz" />
+
+<remove-project name="AOSPA/android_packages_apps_Paranoid_SystemUI" />
+  <project path="packages/apps/Paranoid/SystemUI" name="AOSPA-alioth/android_packages_apps_Paranoid_SystemUI" remote="github" revision="topaz" />
+
+<remove-project name="AOSPA/android_bootable_recovery" />
+  <project path="bootable/recovery" name="AOSPA-alioth/android_bootable_recovery" remote="github" revision="topaz" />
+
+</manifest>
